@@ -4,7 +4,7 @@
 #include <string.h>
 #include <dirent.h>
 
-// ls - v2.0
+// ls - v2.1
 // Copyright (C) by Sakaki, 2026.
 // LICENSE: BSD 3-Clause License <https://opensource.org/license/bsd-3-clause>
 
@@ -52,7 +52,10 @@ int main(int argc, char *argv[]){
         u_dir = true;
     } else if (argc > 1){
         if (argc > 1){
-            if (strcmp(argv[1], "-a") == 0){
+            if (strcmp(argv[1], "-h") == 0){
+                fprintf(stdout, "usage: ls <operation> dir1 dir2...\n"
+                                " -a    : show hidden directories/files.\n\n");
+            } else if (strcmp(argv[1], "-a") == 0){
                 i = 2;
                 o_dir = true;
                 if (argc == 2){
