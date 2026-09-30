@@ -1,4 +1,8 @@
-# Ada - Coreutils.
+# Ada
 
 ### What’s Ada?
 Ada is a project to redeploy coreutils (written from scratch in C) for POSIX systems.
+
+### How to test?
+
+The complete replacement of the current coreutils by Ada is not recommended, for reasons of development that is still experimental and incomplete in certain utilities.
