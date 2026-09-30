@@ -6,3 +6,11 @@ Ada is a project to redeploy coreutils (written from scratch in C) for POSIX sys
 ### How to test?
 
 The complete replacement of the current coreutils by Ada is not recommended, for reasons of development that is still experimental and incomplete in certain utilities.
+
+You can clone the repository and compile the utilities manually using GCC with:
+
+```
+$ wget -c https://github.com/sakaki91/ada
+$ cd ada/src
+$ gcc 'program.c'
+```
