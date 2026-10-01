@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <sys/utsname.h>
 
-// uname - v2.1
+// uname - v2.2
 // Copyright (C) by Sakaki, 2026.
 // LICENSE: BSD 3-Clause License <https://opensource.org/license/bsd-3-clause>
 
@@ -23,18 +23,26 @@ int main(int argc, char *argv[]){
     if (argc < 2){
         printf("%s\n", buffer.sysname);
     } else {
-        while ((args = getopt(argc, argv, "hsrvnm")) != -1){
+        while ((args = getopt(argc, argv, "hasrvnm")) != -1){
             if (args == 'h'){
-                fprintf(stdout, "\033[4moperations:\033[0m\n"
-                                "-h   show this message.\n"
-                                "-s   print the kernel name.\n"
-                                "-r   print the kernel release.\n"
-                                "-v   print the kernel version.\n"
-                                "-n   print the hostname.\n"
-                                "-m   print the machine hardware name.\n\n"
-                                "usage: uname <operation>\n");
+                fprintf(stdout, "\n\033[13mada-uname-2.1\033[0m\n\n"
+                                "\033[1m-h\033[0m, show this message.\n"
+                                "\033[1m-a\033[0m, print all information.\n"
+                                "\033[1m-s\033[0m, print the kernel name.\n"
+                                "\033[1m-r\033[0m, print the kernel release.\n"
+                                "\033[1m-v\033[0m, print the kernel version.\n"
+                                "\033[1m-n\033[0m, print the hostname.\n"
+                                "\033[1m-m\033[0m, print the machine hardware name.\n\n"
+                                "usage: uname <operation>\n\n");
                 exit(EXIT_SUCCESS);
             } else {
+                if (args == 'a'){
+                    s = true;
+                    r = true;
+                    v = true;
+                    n = true;
+                    m = true;
+                }
                 if (args == 's'){
                     s = true;
                 }
@@ -72,7 +80,7 @@ int main(int argc, char *argv[]){
         } 
         if (m == true){
             printf(isa, buffer.machine);
-        } 
+        }
         printf("\n");
     }
     return 0;
