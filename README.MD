@@ -14,5 +14,5 @@ You can clone the repository and compile the utilities using the `build.sh` scri
 $ git clone https://github.com/sakaki91/ada
 $ cd ada
 $ mkdir ada-build
-$ build.sh --prefix ada-build
+$ ./build.sh --prefix ada-build
 ```
