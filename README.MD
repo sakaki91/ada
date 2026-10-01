@@ -1,7 +1,5 @@
 # Ada
 
-![Version 1.0](https://img.shields.io/badge/Version_1.0-1000?style=plastic&labelColor=3d3846&color=deddda)
-
 ### What’s Ada?
 Ada is a project to redeploy coreutils (written from scratch in C) for POSIX systems.
 
