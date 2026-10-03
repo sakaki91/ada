@@ -1,8 +1,5 @@
 # Ada
 
-![Ada - Coreutils](https://img.shields.io/badge/Ada_--_Coreutils-1000?style=flat-square&labelColor=871938&color=dedbdb)
-![POSIX-Compliant](https://img.shields.io/badge/POSIX--Compliant-1000?style=flat-square&labelColor=411515&color=dedbdb)
-
 ### What’s Ada?
 Ada is a project to redeploy coreutils (written from scratch in C) for POSIX systems.
 
