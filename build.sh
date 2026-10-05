@@ -9,6 +9,7 @@ SRC=(
     "mkdir"
     "touch"
     "uname"
+    "yes"
 )
 
 if ! command -v "$CC" &>/dev/null; then
